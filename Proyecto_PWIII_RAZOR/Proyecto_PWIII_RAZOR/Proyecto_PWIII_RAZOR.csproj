@@ -105,6 +105,9 @@
   <ItemGroup>
     <Content Include="Footer.cshtml" />
     <Content Include="IniciarSesion.cshtml" />
+    <Content Include="Header.cshtml" />
+    <Content Include="Inicio.cshtml" />
+    <Content Include="Materias.cshtml" />
     <None Include="packages.config" />
     <Content Include="Registrarse.cshtml" />
     <None Include="Web.Debug.config">

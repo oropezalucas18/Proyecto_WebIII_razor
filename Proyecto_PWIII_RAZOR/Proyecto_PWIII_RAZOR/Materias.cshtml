@@ -1,0 +1,285 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <style type="text/css">
+        footer {
+            width: 100%;
+            background: #202020;
+            color: white;
+        }
+
+        .container-footer-all {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px;
+        }
+
+        .container-body {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .colum1 {
+            max-width: 400px;
+        }
+
+            .colum1 h1 {
+                font-size: 22px;
+            }
+
+            .colum1 p {
+                font-size: 14px;
+                color: #C7C7C7;
+                margin-top: 20px;
+            }
+
+        .colum2 {
+            max-width: 400px;
+        }
+
+            .colum2 h1 {
+                font-size: 22px;
+            }
+
+        .row {
+            margin-top: 20px;
+            display: flex;
+        }
+
+            .row img {
+                width: 36px;
+                height: 36px;
+            }
+
+            .row label {
+                margin-top: 10px;
+                margin-left: 20px;
+                color: #C7C7C7;
+            }
+
+        .colum3 {
+            max-width: 400px;
+        }
+
+            .colum3 h1 {
+                font-size: 22px;
+            }
+
+        .row2 {
+            margin-top: 20px;
+            display: flex;
+        }
+
+            .row2 img {
+                width: 36px;
+                height: 36px;
+            }
+
+        .colum1 img {
+            width: 300px;
+            height: 100px;
+        }
+
+        .row2 label {
+            margin-top: 10px;
+            margin-left: 20px;
+            max-width: 200px;
+        }
+
+        .container-footer-header {
+            width: 100%;
+            background: #101010;
+        }
+
+        .footer {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .copyright {
+            color: #C7C7C7;
+        }
+
+            .copyright a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+            }
+
+        .information a {
+            text-decoration: none;
+            color: #C7C7C7;
+        }
+
+        .auto-style4 {
+            height: 50px;
+            width: 113px;
+        }
+
+        .auto-style5 {
+            width: 144px;
+            height: 141px;
+        }
+
+        .auto-style7 {
+            width: 465px;
+            color: #C7C7C7;
+        }
+
+        .auto-style8 {
+            height: 50px;
+            width: 192px;
+        }
+
+        .auto-style9 {
+            height: 50px;
+            width: 212px;
+        }
+        .sumbit-form input[type="submit"] {
+            height: 30px;
+            width: 100px;
+            background: #fff;
+            border: 1px solid #f2f2f2;
+            border-radius: 20px;
+            color: slategrey;
+            text-transform: uppercase;
+            font-family: 'Ubuntu', sans-serif;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <header>
+            <table style="text-align: center" class="container-footer-header">
+                <tbody>
+                    <tr>
+                        <td class="auto-style7">
+                            <ul class="mainmenu" style="text-align: left">
+                                <li id="ContentPlaceHolder1_liInicio">
+                                    <input type="button" name="btnPageInicio" value="INICIO" style="display: inline-block; font-size: 15px; background-color: black; color: white" class="auto-style4" />
+                                    <br />
+                                    <br />
+                                <li id="ContentPlaceHolder1_liMaterias">
+                                    <input type="button" name="btnPageMaterias" value="MATERIAS" style="display: inline-block; font-size: 15px; background-color: black; color: white" class="auto-style4" />
+                                    <br />
+                                    <br />
+                                <li id="ContentPlaceHolder1_liMateriasPre">
+                                    <input type="button" name="btnPageMateriasPre" value="MATERIAS PRE-REQUISITO" style="width: 210px; display: inline-block; font-size: 15px; background-color: black; color: white" class="auto-style4" />
+                                    <br />
+                                    <br />
+                                <li id="ContentPlaceHolder1_liDocente">
+                                    <input type="button" name="btnPageDocentes" value="DOCENTES" style="display: inline-block; font-size: 15px; background-color: black; color: white" class="auto-style4" />
+
+                                    <br />
+                                    <br />
+                                </li>
+                                <li id="ContentPlaceHolder1_liCerrarSesion">
+                                    <form method="post" action="~/IniciarSesion.cshtml">
+                                        <input type="submit" name="btnPageCerrarSesion" value="CERRAR SESION" style="width: 150px; display: inline-block; font-size: 15px; background-color: black; color: white" class="auto-style4" />
+                                    </form>
+                            </ul>
+                        </td>
+                        <td>
+                            <img src="~/Icons/logoUnivalle.png" class="auto-style5" />
+                            <br />
+                            <label CssClass="auto-style7">La respuesta científica al futuro</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </header>
+    </div>
+    <div id="body">
+        <form method="post" action="">
+            <textarea id="txaComment" rows="2" cols="10"></textarea>
+            <input id="btnSubmitComment" type="submit" value="COMENTAR" class="sumbit-form" />
+        </form>
+        
+    </div>
+    <div id="footer">
+        <footer>
+            <div class="container-footer-all">
+
+                <div class="container-body">
+
+                    <div class="colum1">
+                        <img src="~/Icons/univalle.png" />
+                        <h1>Sobre Univalle</h1>
+                        <p>
+                            La Universidad asume como visión institucional,
+                            el concepto de que la formación profesional de pregrado y postgrado,
+                            junto con la utilización y aplicación plenas del avance científico
+                            y tecnológico, contribuirán a la creación de bienestar social.
+                        </p>
+                    </div>
+                    <div class="colum2">
+                        <h1>En las Redes</h1>
+                        <div class="row">
+                            <img src="~/Icons/facebook.png" />
+                            <label>Facebook Cochabamba</label>
+                        </div>
+                        <div class="row">
+                            <img src="~/Icons/instagram.png">
+                            <label>Instagram Univalle</label>
+                        </div>
+                        <div class="row">
+                            <img src="~/Icons/youtube.png">
+                            <label>Youtube Univalle</label>
+                        </div>
+                    </div>
+                    <div class="colum3">
+                        <h1>Comunicate</h1>
+                        <div class="row2">
+                            <img src="~/Icons/house.png">
+                            <label>
+                                Campus Universitario Tiquipaya
+                                Calle Guillermina Martinez s/n
+                            </label>
+                        </div>
+                        <div class="row2">
+                            <img src="~/Icons/smartphone.png">
+                            <label>
+                                Telefono:
+                                (591)4-4318800
+                                Fax:
+                                (591)4-4317532(3)
+                                4315148-4315886
+                            </label>
+                        </div>
+                        <div class="row2">
+                            <img src="~/Icons/contact.png">
+                            <label>
+                                info@univalle.edu
+                                SIU
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-footer">
+                <div class="footer">
+                    <div class="copyright">
+                        © 2021 Univalle Todos los Derechos Reservados.
+                    </div>
+                    <div class="information">
+                        <a href="">Informacion Compañia</a> | <a href="">Privacion y Politica</a> | <a href="">Terminos y Condiciones</a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
