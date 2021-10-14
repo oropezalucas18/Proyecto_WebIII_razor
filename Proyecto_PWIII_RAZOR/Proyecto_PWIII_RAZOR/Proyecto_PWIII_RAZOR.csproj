@@ -88,6 +88,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DBPrograWebIII.mdf" />
+    <Content Include="App_Data\DBPrograWebIII_log.ldf">
+      <DependentUpon>DBPrograWebIII.mdf</DependentUpon>
+    </Content>
     <Content Include="Icons\contact.png" />
     <Content Include="Icons\facebook.png" />
     <Content Include="Icons\house.png" />
