@@ -1,0 +1,9 @@
+D:\GitHub\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\CapaNegocios\bin\Debug\CapaNegocios.dll
+D:\GitHub\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\CapaNegocios\bin\Debug\CapaNegocios.pdb
+D:\GitHub\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\CapaNegocios\bin\Debug\CapaDatos.dll
+D:\GitHub\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\CapaNegocios\bin\Debug\CapaDatos.pdb
+D:\GitHub\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\CapaNegocios\obj\Debug\BussinesLayer.csproj.AssemblyReference.cache
+D:\GitHub\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\CapaNegocios\obj\Debug\BussinesLayer.csproj.CoreCompileInputs.cache
+D:\GitHub\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\CapaNegocios\obj\Debug\BussinesLayer.csproj.CopyComplete
+D:\GitHub\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\CapaNegocios\obj\Debug\CapaNegocios.dll
+D:\GitHub\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\CapaNegocios\obj\Debug\CapaNegocios.pdb
