@@ -1,5 +1,6 @@
 ﻿@{
-    Layout = null;
+    var db = Database.Open("ConnectionString");
+    var comment = txbComment;
 }
 
 <!DOCTYPE html>
@@ -181,7 +182,7 @@
                                     <br />
                                 <li id="ContentPlaceHolder1_liDocente">
                                     <input type="button" name="btnPageDocentes" value="DOCENTES" style="display: inline-block; font-size: 15px; background-color: black; color: white" class="auto-style4" />
-
+                                    
                                     <br />
                                     <br />
                                 </li>
@@ -203,7 +204,7 @@
     </div>
     <div id="body">
         <form method="post" action="">
-            <textarea id="txaComment" rows="2" cols="10"></textarea>
+            <textarea id="txbComment" name="txbComment" rows="2" cols="10"></textarea>
             <input id="btnSubmitComment" type="submit" value="COMENTAR" class="sumbit-form" />
         </form>
         
