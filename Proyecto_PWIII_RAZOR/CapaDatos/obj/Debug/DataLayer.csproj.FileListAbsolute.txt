@@ -1,6 +1,0 @@
-D:\GitHub\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\CapaDatos\bin\Debug\CapaDatos.dll
-D:\GitHub\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\CapaDatos\bin\Debug\CapaDatos.pdb
-D:\GitHub\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\CapaDatos\obj\Debug\DataLayer.csproj.AssemblyReference.cache
-D:\GitHub\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\CapaDatos\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
-D:\GitHub\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\CapaDatos\obj\Debug\CapaDatos.dll
-D:\GitHub\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\CapaDatos\obj\Debug\CapaDatos.pdb
