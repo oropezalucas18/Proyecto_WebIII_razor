@@ -1,5 +1,18 @@
 ﻿@{
-    Layout = null;
+    var db = Database.Open("connectionstring");
+    var selectcomment = db.Query(@"select * from Comment");
+    var grid = new WebGrid(source: selectcomment);
+    if (IsPost)
+    {
+        var selectquery = @"select * from Person where PersonID = @0";
+        var idUser = db.Query(selectquery, Session["iduser"]).ToList();
+        var name = Request.Form["txaComment"];
+        var insertquery = @"insert into Comment (Description, CommentType, StudentName)
+                          Values(@0,@1,@2)";
+        db.Execute(insertquery, name, "Subject requierement", idUser[0][1]);
+        selectcomment = db.Query(@"select * from Comment");
+        grid = new WebGrid(source: selectcomment);
+    }
 }
 
 <!DOCTYPE html>
@@ -14,73 +27,52 @@
             background: #202020;
             color: white;
         }
-
-        .table-body {
-            align-content: center;
-            border: solid;
-            text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 18px;
-            background-color: #9C114A;
-            width: fit-content;
-            height: fit-content;
-            font-weight: bold;
-        }
-
         .container-footer-all {
-            width: 100%;
-            max-width: 1200px;
             margin: auto;
             padding: 40px;
         }
-
         .container-body {
             display: flex;
             justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
-
         .colum1 {
             max-width: 400px;
+            min-width: 200px;
         }
-
             .colum1 h1 {
                 font-size: 22px;
             }
-
             .colum1 p {
                 font-size: 14px;
                 color: #C7C7C7;
                 margin-top: 20px;
             }
-
         .colum2 {
             max-width: 400px;
+            min-width: 200px;
         }
-
             .colum2 h1 {
                 font-size: 22px;
             }
-
         .row {
             margin-top: 20px;
             display: flex;
         }
-
             .row img {
                 width: 36px;
                 height: 36px;
             }
-
             .row label {
                 margin-top: 10px;
                 margin-left: 20px;
                 color: #C7C7C7;
             }
-
         .colum3 {
             max-width: 400px;
+            min-width: 200px;
         }
-
             .colum3 h1 {
                 font-size: 22px;
             }
@@ -89,76 +81,73 @@
             margin-top: 20px;
             display: flex;
         }
-
             .row2 img {
                 width: 36px;
                 height: 36px;
             }
-
         .colum1 img {
             width: 300px;
             height: 100px;
         }
-
         .row2 label {
             margin-top: 10px;
             margin-left: 20px;
-            max-width: 200px;
+            color: #C7C7C7;
         }
-
         .container-footer-header {
             width: 100%;
-            background: #101010;
+            background-image: url(Icons/portada.jpg);
         }
-
         .footer {
             max-width: 1200px;
             margin: auto;
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
             padding: 20px;
         }
-
         .copyright {
             color: #C7C7C7;
         }
-
             .copyright a {
                 text-decoration: none;
                 color: white;
                 font-weight: bold;
             }
-
-        .information a {
-            text-decoration: none;
-            color: #C7C7C7;
+        .information {
         }
-
+            .information a {
+                text-decoration: none;
+                color: #C7C7C7;
+            }
+        .table-body {
+            align-content: center;
+            border: solid;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            background-color:darkgrey;
+            width: fit-content;
+            height: fit-content;
+            font-weight: bold;
+        }
         .auto-style4 {
             height: 50px;
             width: 113px;
         }
-
         .auto-style5 {
             width: 200px;
             height: 200px;
+            float:right;
         }
-
-        .auto-style7 {
-            width: 465px;
-            color: #C7C7C7;
-        }
-
         .auto-style8 {
             height: 50px;
             width: 192px;
         }
-
         .auto-style9 {
             height: 50px;
             width: 212px;
         }
-
         .sumbit-form input[type="submit"] {
             height: 30px;
             width: 100px;
@@ -210,8 +199,6 @@
                         </td>
                         <td>
                             <img src="~/Icons/logoUnivalle.png" class="auto-style5" />
-                            <br />
-                            <label CssClass="auto-style7">La respuesta científica al futuro</label>
                         </td>
                     </tr>
                 </tbody>
@@ -268,7 +255,7 @@
             </tr>
         </table>
         <form method="post" action="">
-            <textarea id="txaComment" rows="2" cols="10"></textarea>
+            <textarea name="txaComment" rows="2" cols="10"></textarea>
             <input id="btnSubmitComment" type="submit" value="COMENTAR" class="sumbit-form" />
         </form>
 
@@ -276,9 +263,7 @@
     <div id="footer">
         <footer>
             <div class="container-footer-all">
-
                 <div class="container-body">
-
                     <div class="colum1">
                         <img src="~/Icons/univalle.png" />
                         <h1>Sobre Univalle</h1>
@@ -293,15 +278,15 @@
                         <h1>En las Redes</h1>
                         <div class="row">
                             <img src="~/Icons/facebook.png" />
-                            <a href="https://www.facebook.com/UnivalleBolivia" style="margin-left: 10px">Facebook Cochabamba</a>
+                            <label>Facebook Cochabamba</label>
                         </div>
                         <div class="row">
                             <img src="~/Icons/instagram.png">
-                            <a href="https://www.instagram.com/univalle_bolivia/" style="margin-left: 10px">Instagram Univalle</a>
+                            <label>Instagram Univalle</label>
                         </div>
                         <div class="row">
                             <img src="~/Icons/youtube.png">
-                            <a href="https://www.youtube.com/user/univallebolivia" style="margin-left: 10px">Youtube Univalle</a>
+                            <label>Youtube Univalle</label>
                         </div>
                     </div>
                     <div class="colum3">
@@ -325,10 +310,7 @@
                         </div>
                         <div class="row2">
                             <img src="~/Icons/contact.png">
-                            <label>
-                                info@univalle.edu
-                                SIU
-                            </label>
+                            <label>info@univalle.edu</label>
                         </div>
                     </div>
                 </div>
@@ -342,7 +324,6 @@
                         <a href="">Informacion Compañia</a> | <a href="">Privacion y Politica</a> | <a href="">Terminos y Condiciones</a>
                     </div>
                 </div>
-
             </div>
         </footer>
     </div>

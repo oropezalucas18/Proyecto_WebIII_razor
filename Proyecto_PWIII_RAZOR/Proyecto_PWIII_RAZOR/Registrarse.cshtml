@@ -1,5 +1,36 @@
 ﻿@{
-    Layout = null;
+    Validation.RequireField("txtName", "Name is required");
+    Validation.RequireField("txtFirstName", "LastName is required");
+    Validation.RequireField("txtLastName", "SecondLastName is required");
+    Validation.RequireField("txtUserName", "Email is required");
+    Validation.RequireField("txtPassword", "Password is required");
+    Validation.RequireField("txtConfirmPassword", "ConfirmPassword is required");
+    var db = Database.Open("connectionstring");
+    var name = Request["txtName"];
+    var lastname = Request["txtFirstName"];
+    var secondlastname = Request["txtLastName"];
+    var email = Request["txtUserName"];
+    var password = Request["txtPassword"];
+    var confirmpassword = Request["txtConfirmPassword"];
+    var role='0';
+    if (IsPost && Validation.IsValid())
+    {
+        if (email.EndsWith("@univalle.edu"))
+        {
+            role = 'D';
+        }
+        else
+        {
+            role = 'S';
+        }
+        if (password == confirmpassword)
+        {
+            var insertquery = @"insert into Person (FirstName, LastName, SecondLastName, Email, Password, Role)
+                          Values(@0,@1,@2,@3,@4,@5)";
+            db.Execute(insertquery, name, lastname, secondlastname, email, password,role);
+            Response.Redirect("~/IniciarSesion");
+        }
+    }
 }
 
 <!DOCTYPE html>
@@ -9,13 +40,13 @@
     <meta name="viewport" content="width=device-width" />
     <title></title>
     <style type="text/css">
-        body {
+        .body {
             background: #ffffff;
             margin: 0px;
             font-family: 'Ubuntu', sans-serif;
             background-size: 100% 110%;
         }
-        h1, h2, h3, h4, h5, h6, a {
+        .h1, h2, h3, h4, h5, h6, a {
             margin: 0;
             padding: 0;
         }
@@ -34,11 +65,11 @@
             border-radius: 10px;
             box-shadow: 0px 0px 10px #000;
         }
-        .register-form h3 {
-            text-align: left;
-            margin-left: 40px;
-            color: #fff;
-        }
+            .register-form h3 {
+                text-align: left;
+                margin-left: 40px;
+                color: #fff;
+            }
         .register-form {
             box-sizing: border-box;
             padding-top: 15px;
@@ -58,9 +89,9 @@
             outline: none;
             padding-left: 10px;
         }
-        .register-form input[type="button"] {
-            height: 30px;
-            width: 100px;
+        .register-form input[type="submit"] {
+            height: 40px;
+            width: 150px;
             background: #fff;
             border: 1px solid #f2f2f2;
             border-radius: 20px;
@@ -84,24 +115,21 @@
             <h1>REGISTRARSE</h1>
         </div>
         <div class="register-form">
+            @Html.ValidationSummary("*")
             <form method="post" action="">
-                <h3>Nombre:</h3>
-                <input type="text" placeholder="Nombre" name="txtName" /><br>
-                <h3>Apellido paterno:</h3>
+                <h3>CREA UNA CUENTA!</h3>
+                <input type="text" placeholder="Nombre" name="txtName" />
+                <br>
                 <input type="text" placeholder="Apellido paterno" name="txtFirstName" />
                 <br>
-                <h3>Apellido materno:</h3>
                 <input type="text" placeholder="Apellido materno" name="txtLastName" />
                 <br>
-                <h3>Correo Electronico:</h3>
                 <input type="text" placeholder="Correo electronico" name="txtUserName" /><br>
-                <h3>Contraseña:</h3>
                 <input type="password" placeholder="Contraseña" name="txtPassword" />
                 <br>
-                <h3>Confirmar Contraseña:</h3>
                 <input type="password" placeholder=" Confirmar contraseña" name="txtConfirmPassword" />
                 <br>
-                <input type="button" value="REGISTRARSE" class="register-button" name="btnRegister" />
+                <input type="submit" value="REGISTRARSE" class="register-button" name="btnRegister" />
             </form>
         </div>
     </div>

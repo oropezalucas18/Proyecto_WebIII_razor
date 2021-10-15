@@ -236,3 +236,7 @@ C:\Users\orope\Documents\GitHub\Proyecto_PWIII\Proyecto_WebIII_razor\Proyecto_PW
 C:\Users\orope\Documents\GitHub\Proyecto_PWIII\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\Proyecto_PWIII_RAZOR\obj\Debug\Proyecto_PWIII_RAZOR.csproj.CopyComplete
 C:\Users\orope\Documents\GitHub\Proyecto_PWIII\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\Proyecto_PWIII_RAZOR\obj\Debug\Proyecto_PWIII_RAZOR.dll
 C:\Users\orope\Documents\GitHub\Proyecto_PWIII\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\Proyecto_PWIII_RAZOR\obj\Debug\Proyecto_PWIII_RAZOR.pdb
+C:\Users\HP\Desktop\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\Proyecto_PWIII_RAZOR\bin\WebMatrix.Data.dll
+C:\Users\HP\Desktop\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\Proyecto_PWIII_RAZOR\bin\WebMatrix.WebData.dll
+C:\Users\HP\Desktop\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\Proyecto_PWIII_RAZOR\bin\WebMatrix.Data.xml
+C:\Users\HP\Desktop\Proyecto_WebIII_razor\Proyecto_PWIII_RAZOR\Proyecto_PWIII_RAZOR\bin\WebMatrix.WebData.xml
