@@ -112,6 +112,8 @@
     <Content Include="Header.cshtml" />
     <Content Include="Inicio.cshtml" />
     <Content Include="Materias.cshtml" />
+    <Content Include="Materias_Pre.cshtml" />
+    <Content Include="Docentes.cshtml" />
     <None Include="packages.config" />
     <Content Include="Registrarse.cshtml" />
     <None Include="Web.Debug.config">
